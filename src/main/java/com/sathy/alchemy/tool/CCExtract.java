@@ -66,8 +66,6 @@ public class CCExtract {
 
       writer.write("\n" + question);
       writer.write("\nhttp://www.careercup.com" + hl);
-      writer
-          .write("\n------------------------------------------------------------------");
       writer.flush();
       count++;
       System.out.println("Extracted " + count + " qn");
