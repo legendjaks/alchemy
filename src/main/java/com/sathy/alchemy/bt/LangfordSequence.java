@@ -1,4 +1,4 @@
-package com.sathy.alchemy.array;
+package com.sathy.alchemy.bt;
 
 public class LangfordSequence {
 
@@ -9,13 +9,17 @@ public class LangfordSequence {
     return null;
   }
 
+  // backtrack like nqueens problem
   public static boolean explore(int[] sol, int gap) {
     if (gap == 0)
       return true;
+    
     for (int i = sol.length - 1; i - gap > 0; i--) {
+      
       if (sol[i] == 0 && sol[i - gap - 1] == 0) {
         sol[i] = gap;
         sol[i - gap - 1] = gap;
+        
         if (explore(sol, gap - 1))
           return true;
         else {
